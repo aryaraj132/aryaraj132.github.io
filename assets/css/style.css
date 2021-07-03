@@ -113,43 +113,90 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-#header {
-  transition: all 0.5s;
-  background: #fff;
-  z-index: 997;
-  padding: 15px 0;
-  border-bottom: 1px solid #e6f2fb;
+
+header {
+  position: absolute;
+    height: 100vh;
+    width: 350px;
+    background: black;
+  transition: 0.4s;
+  transition-property:width;
+}
+.headerToggle{
+  position: absolute;
+  right: -40px;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  border-radius: 40%;
+}
+.line{
+  width: 80%;
+  height: 4px;
+  background-color: #333;
+  margin: 1px 0;
+  transition: 0.4s;
+  transition-property:transform,opacity;
+}
+.bar1 {
+  -webkit-transform: rotate(-45deg) translate(-4px, 3px);
+  transform: rotate(-45deg) translate(-4px, 3px);
 }
 
-#header.header-scrolled {
-  border-color: #fff;
-  box-shadow: 0px 2px 15px rgba(18, 66, 101, 0.08);
+.bar2 {opacity: 0;}
+
+.bar3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -5px);
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+.cross .bar1 {
+  -webkit-transform: rotate(0deg) translate(0px, 0px);
+  transform: rotate(0deg) translate(0px, 0px);
 }
 
-#header .logo {
-  font-size: 28px;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-  font-family: "Poppins", sans-serif;
-}
+.cross .bar2 {opacity: 1;}
 
-#header .logo a {
-  color: #16507b;
+.cross .bar3 {
+  -webkit-transform: rotate(0deg) translate(0px, 0px);
+  transform: rotate(0deg) translate(0px, 0px);
 }
-
-#header .logo img {
-  max-height: 40px;
+.headerOpen{
+  width: 0px !important;
 }
-
-@media (max-width: 992px) {
-  #header .logo {
-    font-size: 28px;
+@media screen and (max-width: 400px) {
+  header {
+    width: 0px !important;
   }
+  .headerOpen{width: 100% !important;}
+  .cross .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-4px, 3px);
+    transform: rotate(-45deg) translate(-4px, 3px);
+  }
+  
+  .cross .bar2 {opacity: 0;}
+  
+  .cross .bar3 {
+    -webkit-transform: rotate(45deg) translate(-5px, -5px);
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
+  .bar1 {
+    -webkit-transform: rotate(0deg) translate(0px, 0px);
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  
+  .bar2 {opacity: 1;}
+  
+  .bar3 {
+    -webkit-transform: rotate(0deg) translate(0px, 0px);
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  .headerToggle.cross{right: 2px;}
 }
-
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
