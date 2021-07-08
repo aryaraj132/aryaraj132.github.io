@@ -556,9 +556,6 @@ button.icon:hover{
   .name{
     font-size: 50px;
   }
-  .meta-body button{
-    bottom:50px;
-  }
 }
 @media screen and (max-height:700px) {
   .meta-body button{
