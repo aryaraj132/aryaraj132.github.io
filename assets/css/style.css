@@ -547,9 +547,10 @@ button.icon:hover{
     font-size: 80px;
   }
   .d1{
-    transform: scale(0.7);
-    transform-origin: center;
-    right: -400px;
+    height: 700px;
+    width: 700px;
+    top:170px;
+    right: -230px;
   }
 }
 @media screen and (max-width:425px) {
