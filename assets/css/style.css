@@ -524,11 +524,8 @@ button.icon:hover{
   padding: 80px 20px 20px 20px;
 }
 .meta-body button{
-  width: 150px;
-  position: absolute;
-  bottom: 150px;
-  align-self: center;
-  justify-self: center;
+  max-width: 300px;
+  margin-top: 100px;
 }
 @media screen and (max-width:1732px) {
   .d1{right: -20px;}
