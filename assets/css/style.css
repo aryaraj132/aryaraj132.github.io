@@ -1993,7 +1993,7 @@ button.icon:hover{
   top: 1px;
   right: 1px;
 }
-.bottom-20{
+.bottom{
   position: absolute;
-  bottom:-20px;
+  bottom:0px;
 }
