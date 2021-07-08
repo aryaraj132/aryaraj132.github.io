@@ -140,22 +140,7 @@
   });
 
   // Testimonials carousel (uses the Owl Carousel library)
-  $(".testimonials-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      768: {
-        items: 2
-      },
-      900: {
-        items: 3
-      }
-    }
-  });
+ 
 
   // Porfolio isotope and filter
   $(window).on('load', function() {
@@ -174,22 +159,15 @@
     });
 
     // Initiate venobox (lightbox feature used in portofilo)
-    $(document).ready(function() {
-      $('.venobox').venobox({
-        framewidth : 'auto',
-        frameheight: 'auto',
-        'share': false
-      });
-    });
+    // $(document).ready(function() {
+    //   $('.venobox').venobox({
+    //     framewidth : 'auto',
+    //     frameheight: 'auto',
+    //     'share': false
+    //   });
+    // });
   });
 
-  // Portfolio details carousel
-  $(".portfolio-details-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    items: 1
-  });
 
   // Init AOS
   function aos_init() {
