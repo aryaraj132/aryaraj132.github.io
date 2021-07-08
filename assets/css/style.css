@@ -558,11 +558,11 @@ button.icon:hover{
     font-size: 50px;
   }
 }
-@media screen and (max-height:700px) {
+/* @media screen and (max-height:700px) {
   .meta-body button{
     bottom:50px;
   }
-}
+} */
 /*--------------------------------------------------------------
 # Home
 --------------------------------------------------------------*/
