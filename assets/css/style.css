@@ -430,9 +430,16 @@ button.icon:hover{
 /*--------------------------------------------------------------
 # Home
 --------------------------------------------------------------*/
+#scene{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
 .d1{
   position: absolute;
   top: 20px;
+  bottom: 0;
+  margin: auto;
   right: 20px;
   display: flex;
   justify-content: center;
@@ -533,12 +540,14 @@ button.icon:hover{
   width: 50%;
   height: 100%;
   display: flex;
+  align-items: flex-start;
+  justify-content: center;
   flex-direction: column;
   padding: 80px 20px 20px 20px;
 }
 .knowMore{
   max-width: 300px;
-  margin-top: 100px;
+  margin-top: 20px;
 }
 @media screen and (max-width:1732px) {
   .d1{right: -20px;}
@@ -556,11 +565,13 @@ button.icon:hover{
   .name{
     font-size: 80px;
   }
+  .d7{
+    font-size: 15px;
+  }
   .d1{
-    height: 700px;
-    width: 700px;
-    top:170px;
-    right: -230px;
+    height: 600px;
+    width: 600px;
+    right: -150px;
   }
 }
 @media screen and (max-width:425px) {
