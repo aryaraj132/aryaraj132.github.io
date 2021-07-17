@@ -319,7 +319,9 @@ section {
   background-attachment: fixed;
   background-size: cover;
 } */
+
 .meta-title{
+  display: block;
   position: relative;
   left: -120%;
   font-size: 20px;
@@ -339,6 +341,15 @@ section {
   height: 1px;
   width: 20%;
   background: rgba(255, 255, 255, 0.7);
+}
+@media screen and (max-width:768px) {
+  .meta-title{
+    position: absolute;
+    left: 55px !important;
+  }
+  .meta-title::after{
+    width: 100%;
+  }
 }
 .card-footer{
   text-align: center;
@@ -387,12 +398,12 @@ button.icon:hover{
     background-size: 100% 100%;
   }
 }
-.slide{
+.slide-project{
   padding-top: 80px;
   min-height: 70vh;
 }
 @media screen and (max-height:630px) {
-  .slide{
+  .slide-project{
     padding-top: 20px;
     height: 70vh;
   }
@@ -402,7 +413,8 @@ button.icon:hover{
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
-  position: relative;
+  position: absolute;
+  bottom: 0;
   /* display: flex;
   justify-content: center;
   align-items: center; */
@@ -546,6 +558,9 @@ button.icon:hover{
   justify-content: center;
   flex-direction: column;
   padding: 80px 20px 20px 20px;
+}
+.maxHeight{
+  height: 100%;
 }
 @media screen and (max-width:1732px) {
   .d1{right: -20px;}
