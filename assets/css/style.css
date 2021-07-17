@@ -122,7 +122,15 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-
+.fullpageCover{
+  position: fixed;
+  z-index: 999;
+  height: 100vh;
+  background: #000022;
+  width: 100vw;
+  transition: height 200ms ease;
+  /* transition-delay: 1.5s; */
+}
 header {
   z-index: 9;
   position: fixed;
@@ -455,6 +463,7 @@ button.icon:hover{
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
   background-color: rgba(20, 20, 20, 0.3);
   width: 800px;
   height: 800px;
@@ -462,17 +471,22 @@ button.icon:hover{
   transform-style: preserve-3d;
   transform: translateZ(10px);
   box-shadow: 0 0 50px rgba(255, 255, 255, 0.6);
+  transition: opacity 200ms ease;
 }
 .d2{
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(40, 40, 40, 0.3);;
-  width: 90%;
-  height: 90%;
+  width: 10%;
+  height: 10%;
   border-radius:50% ;
   transform-style: preserve-3d;
   transform: translateZ(20px);
+  transition-property: width,height;
+  transition-duration: 700ms;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.575);
+  transition-delay: 200ms;
 }
 .d3{
   display: flex;
@@ -522,10 +536,13 @@ button.icon:hover{
 .d7{
   font-weight: 700;
   color: #ff5757;
+  opacity: 0;
   text-transform: uppercase;
   transform-style: preserve-3d;
   transform: translateZ(70px);
   text-shadow: 0 0 50px black;
+  transition: opacity 200ms ease;
+  transition-delay: 900ms;
 }
 .name{
   color: rgba(255, 255, 255, 0.85);
@@ -545,6 +562,23 @@ button.icon:hover{
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   background-color: red;
+}
+.desc1, .desc2, .desc3{
+  font-size: 25px;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition-property: transform,opacity;
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+}
+.desc1{
+  transition-delay: 100ms;
+}
+.desc2{
+  transition-delay: 150ms;
+}
+.desc3{
+  transition-delay: 200ms;
 }
 #home .container{
   height:calc(100vh - 80px);
