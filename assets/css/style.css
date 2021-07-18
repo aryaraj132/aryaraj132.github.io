@@ -600,7 +600,7 @@ button.icon:hover{
   .d1{
     height: 100vw;
     width: 100vw;
-    right: -50px;
+    right: 0px;
     top:150px !important;
   }
 }
