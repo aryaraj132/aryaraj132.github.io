@@ -301,7 +301,6 @@ section {
   position: relative;
   padding-top: 80px;
   width: 100vw;
-  min-height: 100vh;
   /* overflow: hidden; */
 }
 /* .sec-2{
