@@ -320,7 +320,7 @@ section {
 
 .meta-title{
   display: block;
-  position: relative;
+  position: absolute;
   opacity: 0;
   font-size: 20px;
   font-weight: 700;
@@ -336,18 +336,10 @@ section {
   content: '';
   display: block;
   height: 1px;
-  width: 20%;
+  width: 130%;
   background: rgba(255, 255, 255, 0.7);
 }
-@media screen and (max-width:768px) {
-  /* .meta-title{
-    position: absolute;
-    left: 55px !important;
-  } */
-  .meta-title::after{
-    width: 100%;
-  }
-}
+
 .card-footer{
   text-align: center;
 }
