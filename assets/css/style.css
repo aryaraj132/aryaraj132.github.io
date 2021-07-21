@@ -339,7 +339,7 @@ section {
   width: 20%;
   background: rgba(255, 255, 255, 0.7);
 }
-@media screen and (max-width:768px) {
+/* @media screen and (max-width:768px) {
   .meta-title{
     position: absolute;
     left: 55px !important;
@@ -347,7 +347,7 @@ section {
   .meta-title::after{
     width: 100%;
   }
-}
+} */
 .card-footer{
   text-align: center;
 }
