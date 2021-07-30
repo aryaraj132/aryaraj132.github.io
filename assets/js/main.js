@@ -54,6 +54,9 @@
     document.addEventListener('click',()=>{
       mouseImg.setAttribute("style",`animation: mouse 700ms forwards linear;`);
     });
+
+    // Flip book
+    
 });
 
   
