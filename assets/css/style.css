@@ -1125,14 +1125,32 @@ button.icon:hover{
     transform: scale(0.75);
   }
 }
+
 .water{
   position: relative;
   width: 100%;
   height: calc(100vh - 310px);
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   z-index: 8;
 }
-
+@media screen and (min-width:769px) {
+  .water{
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+}
+.portfolio-details .img-fluid{
+  max-width: 100%;
+  height: calc(100vh - 430px) !important;
+}
+@media screen and (min-width:992px) {
+  .portfolio-details .img-fluid{
+      max-width: 750px;
+      width: 50vw;
+      max-height: 1000px;
+  }
+}
 .sea-bed{
   position: absolute;
   width: 100%;
@@ -1221,6 +1239,10 @@ button.icon:hover{
   }
   .water{
     height: calc(100vh - 260px);
+  }
+  .portfolio-details .img-fluid{
+    max-width: 100%;
+    height: calc(100vh - 380px) !important;
   }
 }
 @media screen and (max-height:500px) {
@@ -2440,8 +2462,36 @@ button.icon:hover{
 --------------------------------------------------------------*/
 .portfolio-details {
   padding-top: 40px;
+  
+}
+@media screen and (min-width:769px) {
+  .portfolio-details{
+    height: 100%;
+    scroll-snap-align: start;
+    scroll-behavior: smooth;
+  }
 }
 
+.portfolio-details .img-sub{
+  width: 100%;
+  z-index: 1;
+  background: rgba(0,0,0,0.5);
+  height: 20px;
+  color: white;
+  /* text-align: center; */
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  /* vertical-align: top; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width:992px) {
+  .portfolio-details .img-sub{
+    justify-content: start;
+  }
+}
 .portfolio-details .portfolio-details-container {
   position: relative;
 }
@@ -2735,4 +2785,7 @@ button.icon:hover{
 .bottom{
   position: absolute;
   bottom:0px;
+}
+.maxContent-width{
+  max-width: max-content;
 }
