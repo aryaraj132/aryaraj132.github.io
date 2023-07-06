@@ -12,13 +12,10 @@ jobs:
     steps:
     - name: install ssh keys
       run: |
-        install -m 600 -D /dev/null ~/.ssh/ssh-key-2022-04-03
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/ssh-key-2022-04-03
+        install -m 600 -D /dev/null ~/.ssh/github_action
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/github_action
         ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
-        echo "${{ secrets.SSH_PUB_KEY }}" > ~/.ssh/ssh-key-2022-04-03.pub
-        touch ~/.ssh/authorized_keys
-        cat ~/.ssh/ssh-key-2022-04-03.pub >> ~/.ssh/authorized_keys
     - name: connect and pull
-      run: ssh -i ~/.ssh/ssh-key-2022-04-03 ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} " exit"
+      run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} " exit"
     - name: cleanup
       run: rm -rf ~/.ssh
