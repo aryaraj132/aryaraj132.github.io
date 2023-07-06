@@ -238,7 +238,7 @@ export default class home extends Component {
                 <div className="container position-relative maxHeight">
                     <div className="meta-body">
                         <h1 className="name">Aryan <br /> Raj </h1>
-                        <span className="desc1 text-white">Student,</span><span className="desc2 ml-2 text-white">Developer,</span><span className="desc3 ml-4 text-white">Freelancer</span>
+                        <span className="desc1 text-white">Developer,</span><span className="desc2 ml-2 text-white">Learner,</span><span className="desc3 ml-4 text-white">Freelancer</span>
                     </div>
                 </div>
             </section>
@@ -252,7 +252,7 @@ export default class home extends Component {
             <div className="container position-relative maxHeight">
                     <div className="container-body">
                         <h1 className="name">About <br /> Me</h1>
-                        <h2 className="text-white ml-3 meta-desc desc1"><span>I'm an student who loves to code, visualize and build new stuff.</span></h2>
+                        <h2 className="text-white ml-3 meta-desc desc1"><span>I'm a Developer who loves to code, visualize and build new stuff.</span></h2>
                         <div className="knowMore desc3 ml-3">
                             <Link to="/about"><button className="btn btn-outline-danger btn-lg">Know More</button></Link>
                         </div>
@@ -302,7 +302,7 @@ export default class home extends Component {
                                 <div className="card-footer bg-transparent">
                                     <a href="https://github.com/aryaraj132/EmailAutomation-MERN" target="_blank"><button
                                             className="icon ri-github-fill"></button></a>
-                                    <a href="https://email-automation-mern.herokuapp.com/" target="_blank"><button
+                                    <a href="https://email-automate.heyaryan.in/" target="_blank"><button
                                             className="icon ri-global-line"></button></a>
                                 </div>
                         </div>

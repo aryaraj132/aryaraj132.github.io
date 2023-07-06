@@ -174,7 +174,7 @@ export default class Projects extends Component {
                                             <li><strong>Category</strong>: Web Development</li>
                                             <li><strong>Tech Stack</strong>: MERN Stack</li>
                                             <li><strong>Github URL</strong>: <a target="_blank" href="https://github.com/aryaraj132/EmailAutomation-MERN">github.com/aryaraj132/EmailAutomation-MERN</a></li>
-                                            <li><strong>Project URL</strong>: <a target="_blank" href="https://email-automation-mern.herokuapp.com/">email-automation-mern.herokuapp.com/</a></li>
+                                            <li><strong>Project URL</strong>: <a target="_blank" href="https://email-automate.heyaryan.in/">email-automate.heyaryan.in/</a></li>
                                         </ul>
                                     </div>
 
@@ -306,7 +306,7 @@ export default class Projects extends Component {
                                             <li><strong>Category</strong>: Web Development</li>
                                             <li><strong>Tech Stack</strong>: Django, JavaScript</li>
                                             <li><strong>Github URL</strong>: <a target="_blank" href="https://github.com/aryaraj132/Takshashila">github.com/aryaraj132/Takshashila</a></li>
-                                            <li><strong>Project URL</strong>: <a target="_blank" href="https://takshashila.herokuapp.com/">takshashila.herokuapp.com</a></li>
+                                            {/* <li><strong>Project URL</strong>: <a target="_blank" href="https://takshashila.herokuapp.com/">takshashila.herokuapp.com</a></li> */}
                                         </ul>
                                     </div>
 
@@ -340,7 +340,7 @@ export default class Projects extends Component {
                                             <li><strong>Category</strong>: Web Development</li>
                                             <li><strong>Tech Stack</strong>: PHP, JavaScript, MySQL</li>
                                             <li><strong>Github URL</strong>: <a target="_blank" href="https://github.com/aryaraj132/Intern-Blog-System">github.com/aryaraj132/Intern-Blog-System</a></li>
-                                            <li><strong>Project URL</strong>: <a target="_blank" href="http://internblogsystem.rf.gd/">internblogsystem.rf.gd</a></li>
+                                            {/* <li><strong>Project URL</strong>: <a target="_blank" href="http://internblogsystem.rf.gd/">internblogsystem.rf.gd</a></li> */}
                                         </ul>
                                     </div>
 
@@ -388,7 +388,7 @@ export default class Projects extends Component {
                             <div className="card-footer bg-transparent">
                                 <a target="_blank" href="https://github.com/aryaraj132/EmailAutomation-MERN" target="_blank"><button
                                     className="icon ri-github-fill"></button></a>
-                                <a target="_blank" href="https://email-automation-mern.herokuapp.com/" target="_blank"><button
+                                <a target="_blank" href="https://email-automate.heyaryan.in/" target="_blank"><button
                                     className="icon ri-global-line"></button></a>
                             </div>
                         </div>
@@ -457,8 +457,8 @@ export default class Projects extends Component {
                             <div className="card-footer bg-transparent">
                                 <a target="_blank" href="https://github.com/aryaraj132/Takshashila" target="_blank"><button
                                     className="icon ri-github-fill"></button></a>
-                                <a target="_blank" href="https://takshashila.herokuapp.com/" target="_blank"><button
-                                    className="icon ri-global-line"></button></a>
+                                {/* <a target="_blank" href="https://takshashila.herokuapp.com/" target="_blank"><button
+                                    className="icon ri-global-line"></button></a> */}
                             </div>
                         </div>
                     </div>
@@ -524,8 +524,8 @@ export default class Projects extends Component {
                             <div className="card-footer bg-transparent">
                             <a target="_blank" href="https://github.com/aryaraj132/Intern-Blog-System" target="_blank"><button
                                     className="icon ri-github-fill"></button></a>
-                                <a target="_blank" href="http://internblogsystem.rf.gd/" target="_blank"><button
-                                    className="icon ri-global-line"></button></a>
+                                {/* <a target="_blank" href="http://internblogsystem.rf.gd/" target="_blank"><button
+                                    className="icon ri-global-line"></button></a> */}
                             </div>
                         </div>
                     </div>
