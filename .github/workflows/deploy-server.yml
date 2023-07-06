@@ -15,7 +15,12 @@ jobs:
         install -m 600 -D /dev/null ~/.ssh/id_rsa
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
         ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
+        echo "Host server" >> ~/.ssh/config
+        echo "  HostName ${{ secrets.SSH_HOST }}" >> ~/.ssh/config
+        echo "  User ${{ secrets.SSH_USER }}" >> ~/.ssh/config
+        echo "  AddKeysToAgent yes" >> ~/.ssh/config
+        echo "  IdentityFile ~/.ssh/id_rsa" >> ~/.ssh/config
     - name: connect and pull
-      run: ssh -i ~/.ssh/id_rsa ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} " exit"
+      run: ssh server " exit"
     - name: cleanup
       run: rm -rf ~/.ssh
