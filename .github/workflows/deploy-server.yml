@@ -17,7 +17,7 @@ jobs:
         ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
         echo "${{ secrets.SSH_PUB_KEY }}" > ~/.ssh/ssh-key-2022-04-03.pub
         touch ~/.ssh/authorized_keys
-        cat ssh-key-2022-04-03.pub >> ~/.ssh/authorized_keys
+        cat ~/.ssh/ssh-key-2022-04-03.pub >> ~/.ssh/authorized_keys
     - name: connect and pull
       run: ssh -i ~/.ssh/ssh-key-2022-04-03 ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} " exit"
     - name: cleanup
