@@ -12,17 +12,10 @@ jobs:
     steps:
     - name: install ssh keys
       run: |
-        mkdir ~/.ssh
-        touch ~/.ssh/id_rsa
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
-        echo "Host server" >> ~/.ssh/config
-        echo "  HostName ${{ secrets.SSH_HOST }}" >> ~/.ssh/config
-        echo "  User ${{ secrets.SSH_USER }}" >> ~/.ssh/config
-        echo "  AddKeysToAgent yes" >> ~/.ssh/config
-        echo "  IdentityFile ~/.ssh/id_rsa" >> ~/.ssh/config
+        touch ~/id_rsa
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/id_rsa
+        chmod 600 ~/id_rsa
     - name: connect and pull
-      run: ssh server " exit"
+      run: ssh -i ~/id_rsa ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} " exit"
     - name: cleanup
       run: rm -rf ~/.ssh
