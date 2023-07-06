@@ -11,14 +11,11 @@ jobs:
     
     steps:
     - name: install ssh keys
-      uses: appleboy/ssh-action@v0.1.10
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USER }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        script: whoami "&&" pwd "&&" ls -al
-    # - name: connect and pull
-    #   # run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} " exit"
-    #   run : ssh -i ~/.ssh/id_rsa ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "exit"
+      run: |
+        install -m 600 -D /dev/null ~/.ssh/ssh-key-2022-04-03.key
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/ssh-key-2022-04-03.key
+        ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
+    - name: connect and pull
+      run: ssh -i ~/.ssh/ssh-key-2022-04-03.key ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} " exit"
     - name: cleanup
       run: rm -rf ~/.ssh
