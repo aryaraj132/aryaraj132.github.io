@@ -238,7 +238,7 @@ export default class home extends Component {
                 <div className="container position-relative maxHeight">
                     <div className="meta-body">
                         <h1 className="name">Aryan <br /> Raj </h1>
-                        <span className="desc1 text-white">Developer,</span><span className="desc2 ml-2 text-white">Learner,</span><span className="desc3 ml-4 text-white">Freelancer</span>
+                        <span className="desc1 text-white">Learner,</span><span className="desc2 ml-2 text-white">Developer,</span><span className="desc3 ml-3 text-white">Freelancer</span>
                     </div>
                 </div>
             </section>
