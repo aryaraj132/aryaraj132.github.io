@@ -34,9 +34,9 @@ export default class About extends Component {
                     <h2 className="position-relative about-title">Who am I?</h2>
                     <div className="maxHeight halfWidth linehight-2 align-self-end">
                         <h3>Aryan Raj</h3>
-                        <p>A Computer Science and Engineering 3<sup>rd</sup> year student from Rajasthan Technical University, Kota. <br />
+                        <p>A Computer Science and Engineering student from Rajasthan Technical University, Kota. <br />
                         I like to built apps in my free time. Joined Freelance community in my 2<sup>nd</sup> Year and worked with two UK based startup.<br />
-                        Currently learning to grow and be more.</p>
+                        Currently Working as SDE @ Mailmodo.</p>
                     </div>
                     </div>
                     <br /><br />
